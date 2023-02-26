@@ -1,0 +1,12 @@
+<mat-card class="beer-card">
+	<mat-card-content class="home-card-content">
+		<div class="beer-image-container" matTooltip="{{ingredents}}  " matTooltipPosition="above">
+			<img class="beer-image" [src]="beer.image_url" alt="Beer picture">
+		</div>
+		<div>
+			<h1>{{beer.name}}</h1>
+			<h4 class="tag-line">{{beer.tagline}}</h4>
+			<p class="desc">{{beer.description}}</p>			
+		</div>
+	</mat-card-content>
+</mat-card>

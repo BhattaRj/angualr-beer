@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Add a New Beer</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+
+        <img class="beer-image" src="./assets/beer.png" alt="beer">
+
+        <mat-form-field class="full-width mt-10 mb-10" appearance="outline">
+            <input matInput placeholder="Beer Name " formControlName="name" maxlength="100" name="name" required>
+            <mat-error *ngIf="name.hasError('required')">
+                Beer name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width mt-10 mb-10" appearance="outline">
+            <input matInput placeholder="Genere" formControlName="tagline" maxlength="100" name="tagline" required>
+            <mat-error *ngIf="tagline.hasError('required')">
+                Genere is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width mt-10 mb-10" appearance="outline">
+            <textarea matInput placeholder="Description" formControlName="description" name="description"
+                required></textarea>
+            <mat-error *ngIf="description.hasError('required')">
+                Description is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="saving">
+            <span *ngIf="!saving">Submit</span>
+            <span *ngIf="saving">Submitting...</span>
+        </button>
+    </mat-dialog-actions>
+
+</form>

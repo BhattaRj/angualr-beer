@@ -1,0 +1,74 @@
+.beer-card {
+  border-radius: 4px;
+  margin-top: 15px;
+  padding: 0;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+
+  :hover {
+    background-color: #f3f8fd;
+  }
+
+  .tag-line {
+    margin: 0 0 10px !important;
+    color: #ddaa57;
+  }
+
+  .beer-image-container {
+    display: flex;
+    height: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+  }
+
+  .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.7;
+  }
+
+  .beer-image {
+    height: 140px;
+    margin: auto; /* Magic! */
+    object-fit: contain;
+  }
+
+  //   .mat-card-image {
+  //     margin: 0;
+  //     height: 160px !important;
+  //     object-fit: contain !important;
+  //   }
+
+  .home-card-content {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+
+    // & > * {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   flex: auto;
+    //   //   max-width: 30%;
+
+    //   &:first-child {
+    //     border-top-left-radius: 4px;
+    //     border-bottom-left-radius: 4px;
+    //     // width: 30%;
+    //     width: 160px;
+    //     // max-width: 30%;
+    //     height: 160px !important;
+    //     object-fit: contain !important;
+    //   }
+
+    //   &:last-child {
+    //     flex-direction: column;
+    //     align-items: start;
+    //     padding: 8px;
+    //   }
+    // }
+  }
+}

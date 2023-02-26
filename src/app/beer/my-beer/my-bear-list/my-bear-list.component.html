@@ -1,0 +1,18 @@
+<div class="row layout-end">
+    <button mat-raised-button color="primary" (click)="addBeer()">Add Beer</button>
+</div>
+
+<div *ngIf="!beers.length" class="default layout-center">
+    <p>Nothing to see yet.</p>
+    <span> <a mat-button color="primary" (click)="addBeer()">Click Here </a> to add
+        first beer
+    </span>
+</div>
+
+<div *ngFor="let beer of beers; let i=index">
+    <app-beer [beer]="beer"></app-beer>
+</div>
+
+<div class="load-more row layout-center">
+    <h2 *ngIf="loading">Loading..</h2>
+</div>

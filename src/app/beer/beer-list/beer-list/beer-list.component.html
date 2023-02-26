@@ -1,0 +1,15 @@
+<div *ngFor="let beer of beers; let i=index">
+    <app-beer [beer]="beer"></app-beer>
+</div>
+
+<div class="load-more row layout-center">
+    <h2 *ngIf="loading">Loading..</h2>
+</div>
+
+<div class="load-more row layout-center m-40 p-40">
+    <button mat-button color="primary" (click)="loadMore()" *ngIf="!loading">
+        <span> Load More </span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+
+</div>
